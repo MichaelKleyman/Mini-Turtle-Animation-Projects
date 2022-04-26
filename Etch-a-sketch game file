@@ -1,0 +1,23 @@
+from turtle import Turtle, Screen
+
+tim = Turtle()
+screen = Screen()
+
+def move_forwards():
+    tim.fd(20)
+def move_backwards():
+    tim.bk(20)
+def counter_clockwise():
+    tim.left(10)
+def clockwise():
+    tim.right(10)
+def reset():
+    tim.reset()
+
+screen.listen()
+screen.onkey(key="Right", fun=move_forwards)
+screen.onkey(key="Left", fun=move_backwards)
+screen.onkey(key="Up", fun=counter_clockwise)
+screen.onkey(key="Down", fun=clockwise)
+screen.onkey(key="a", fun=reset)
+screen.exitonclick()
